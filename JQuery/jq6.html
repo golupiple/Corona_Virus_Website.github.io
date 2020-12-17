@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.red
+		{
+			color: red;
+		}
+		.orange
+		{
+			color: orange;
+		}
+		.green
+		{
+			color: green;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$("#text").keyup(function(){
+
+         a=$("#text").val().length;
+         if(a<1)
+         {
+         	$("#span1").text("");
+         }
+
+         else if(a<4)
+         {
+         	$("#span1").text("weak password");
+         	$("#span1").addClass("red");
+         	$("#span1").removeClass("orange");
+         }
+
+         else if(a<8)
+         {
+         	$("#span1").text("good password");
+         	$("#span1").addClass("orange");
+         	$("#span1").removeClass("green");
+         }
+
+         else
+
+         {
+         	$("#span1").text("strong password");
+         	$("#span1").addClass("green");
+         	
+         }
+
+			});
+		});
+	</script>
+</head>
+<body>
+<input type="password" id="text"><br><br>
+<span id="span1"></span>
+</body>
+</html>

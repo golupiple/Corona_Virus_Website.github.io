@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Corona-Virus</title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="image" rel="icon" href="img/coronavirus.png">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!--   <link rel="stylesheet" type="text/css" href="style.css"> -->
+   <link href='https://fonts.googleapis.com/css?family=Mulish' rel='stylesheet'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- font awosome -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+ <!-- ............Animation.............. -->
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+     <script src="js/wow.min.js"></script>
+
+
+
+<!-- owl carousel -->
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+
+
+<!-- owl csrousel script -->
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/owl.autoplay.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+  /*.....................start symptons.......................*/
+.imgBox .img-fluid{
+  max-width: 62%;
+  margin: auto;
+  position: relative;
+}
+.imgBox p{
+  font-size: 1.3rem;
+}
+.owl-carousel .owl-item{
+transform: scale(0.7);
+padding: 10px 0px;
+transition: all 0.5s;
+}
+
+.owl-carousel .owl-item.active.center{
+transform: scale(1.3);
+z-index: 999;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+
+/*.....................end symptons.......................*/
+</style>
+
+</head>
+<body> <!-- yaha boady ke andar ye tha- onload="fetch()" -->
+<nav class="navbar navbar-expand-md navbar-dark navStyle">
+	<div class="container-fluid">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#"><img src="img/coronaLogo.png" class="img-fluid" height="150" width="150"></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto text-center">
+      <li class="nav-item">
+        <a class="nav-link hover-line" href="#index">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link hover-line" href="#about">ABOUT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link hover-line" href="#symptoms">SYMPTOMS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link hover-line" href="#Prevention">PREVENTION</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link hover-line" href="#contact">CONTACT</a>
+      </li>
+    </ul>
+</div><!-- end of container-fluid -->
+  </div><!-- end of collapse -->
+</nav>
+<!-- ....................end of navbar................. -->
+
+
+
+
+<!-- ....................start next row and colom................. -->
+<div class="mainHeader mb-5">
+
+	<div class="row w-100 h-100">
+		<div class="col-lg-5 col-md-5 col-sm-12 order-lg-1 order-2">
+			<div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
+				<img src="img/eksath.png"  width="350" height="350" class="img-fluid" id="eksath">
+			</div><!-- end of leftside -->
+		</div><!-- end of col -->
+
+		<div class="col-lg-7 col-md-7 col-sm-12 order-lg-2 order-1">
+			<div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+				<h1>Let's Stay Safe & Fight Together Against Cor<span class="coronaRotade"> <img src="img/coronavirus.png" class="img-fluid" width="80" height="80"> </span>na Virus</h1>
+			</div><!-- end of rightside -->
+		</div><!-- end of col -->
+	</div><!-- end of row -->
+</div><!-- end of mainHeader -->
+<!-- ....................end next  mainHeader row and colom................. -->
+
+
+
+
+<!-- ....................start third section coronaUpdate................. -->
+<section class="coronaUpdate container-fluid">
+	<div class="mb-4">
+		<h3 class="text-center">COVID-19 UPDATES</h3>
+	</div>
+
+<div class="table-responsive">
+  <table class="table table-dark table-hover text-center table-striped table-bordered" id="tbval">
+      <tr>
+        <th>S.N.</th>
+        <th>Country</th>
+        <th>NewConfirmed</th>
+        <th>TotalConfirmed</th>
+        <th>NewDeaths</th>
+        <th>TotalDeaths</th>
+        <th>NewRecovered</th>
+        <th>TotalRecovered</th>
+         
+      </tr>
+      <tbody id="country-wise">
+        
+      </tbody>
+  </table>
+</div><!-- end of table-responsive -->
+
+</section><!-- end of coronaUpdate -->
+
+
+  <!--  // ........................API CORON......................... -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.js"></script> -->
+ <script type="text/javascript">
+
+$.ajax({
+  url : "https://api.covid19api.com/summary",
+  type : "GET",
+  dataType : "JSON",
+  success : function(data){
+    console.log(data);
+    console.log(data.Countries);
+
+    $.each(data.Global, function(key, value){
+      // console.log(key + " : " + value);
+
+      $("#global-wise").append("<tr><td>" + key +"</td><td>" + value +"</td></tr>")
+    });
+
+   
+var sno = 1;
+
+     $.each(data.Countries, function(key, value){
+
+      $("#country-wise").append("<tr>" + 
+        "<td>" + sno +"</td>" + 
+        "<td>" + value.Country +"</td>" + 
+        "<td>" + value.NewConfirmed +"</td>" + 
+        "<td>" + value.TotalConfirmed +"</td>" + 
+        "<td>" + value.NewDeaths +"</td>" + 
+        "<td>" + value.TotalDeaths +"</td>" + 
+        "<td>" + value.NewRecovered +"</td>" + 
+        "<td>" + value.TotalRecovered +"</td>" + 
+        
+     "</tr>");
+
+      sno++;
+    });
+
+
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- ....................end third section coronaUpdate................. -->
+
+
+<!-- ....................start forth container-fluid about corona................. -->
+<div class="container-fluid forthSection pt-2 pb-5" id="about">
+	<div class="sectionHeader text-center mb-5 mt-4">
+		<h1>ABOUT COVID-19</h1>
+	</div><!-- end of sectionHeader -->
+
+
+	<div class="row pt-5 px-3">
+		<div class="col-lg-6 col-md-6 col-sm-12 aboutImg">
+			<figure><img src="img/aboutCorona.png" class="img-fluid animate__animated animate__zoomIn
+ wow" data-wow-duration="2s" data-wow-delay="0.2s"></figure>
+		</div><!-- end of col -->
+
+		<div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-start flex-column  aboutPara">
+			<h2 class="animate__animated animate__backInDown wow" data-wow-duration="2s" data-wow-delay="0.3s">What is COVID-19 (Corona-Virus)</h2>
+			<p class="animate__animated animate__lightSpeedInRight wow" data-wow-duration="2s" data-wow-delay="1s">Coronaviruses are large group of viruses that cause illness in humans and animals. Rarely, animal coronaviruses can evolve and infect people and then spread between people such as has been seen with MERS and SARS.</p>
+
+			<p id="para" class="animate__animated animate__lightSpeedInRight wow" data-wow-duration="2s" data-wow-delay="1.5s">Although most human coronavirus infections are mild, the epidemics of the severe acute respiratory syndrome coronavirus (SARS-CoV) and Middle East respiratory syndrome coronavirus (MERS-CoV), have caused more than 10,000 cumulative cases in the past two decades, with mortality rates of 10% for SARS-CoV. <br>
+      Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.<br></p>
+		</div><!-- end of col -->
+
+	</div><!-- end of row -->
+</div><!-- end ofd-flexforthSection -->
+<!-- ....................end forth container-fluid about corona................. -->
+
+
+
+
+
+
+
+
+
+<!-- .....................start container-fluid symptons....................... -->
+<div class="container-fluid fiveSecrion pt-2 pb-5" id="symptoms">
+  <div class="symtons text-center mt-4">
+    <h1>CORONAVIRUS SYMPTOMS</h1>
+  </div><!-- end of symtons -->
+
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+      <figure class="text-center symptomsimg animate__animated animate__lightSpeedInLeft wow" data-wow-duration="2s" data-wow-delay="1s">
+        <img src="img/fever.png" width="150" height="150" class="img-fluid">
+        <figcaption>Fever</figcaption>
+      </figure>
+    </div><!-- end of col -->
+
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+      <figure class="text-center symptomsimg animate__animated animate__lightSpeedInLeft wow" data-wow-duration="2s" data-wow-delay="0.8s">
+        <img src="img/headache.png" width="150" height="150" class="img-fluid">
+        <figcaption>Headache</figcaption>
+      </figure>
+    </div><!-- end of col -->
+
+
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+      <figure class="text-center symptomsimg animate__animated animate__lightSpeedInLeft wow" data-wow-duration="2s" data-wow-delay="0.5s">
+        <img src="img/flu.png" width="150" height="150" class="img-fluid">
+        <figcaption>Flu</figcaption>
+      </figure>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+
+   <div class="row pt-5">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+      <figure class="text-center symptomsimg animate__animated animate__lightSpeedInRight wow" data-wow-duration="2s" data-wow-delay="1s">
+        <img src="img/outOfBreath.png" width="150" height="150" class="img-fluid">
+        <figcaption>Out Of Breath</figcaption>
+      </figure>
+    </div><!-- end of col -->
+
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+      <figure class="text-center symptomsimg animate__animated animate__lightSpeedInRight wow" data-wow-duration="2s" data-wow-delay="0.8s">
+        <img src="img/cough.png" width="150" height="150" class="img-fluid">
+        <figcaption>Severe Cough</figcaption>
+      </figure>
+    </div><!-- end of col -->
+
+
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+      <figure class="text-center symptomsimg animate__animated animate__lightSpeedInRight wow" data-wow-duration="2s" data-wow-delay="0.5s">
+        <img src="img/soreThroat.png" width="150" height="150" class="img-fluid">
+        <figcaption>Sore Throat</figcaption>
+      </figure>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+  </div><!-- end of container -->
+</div><!-- end of fiveSecrion -->
+<!-- .....................end container-fluid symptons....................... -->
+
+
+
+
+<!-- ..............start owl carousel 6 Steps Prevention Against CoronaVirus........... -->
+<div class="container-fluid fiveSecrion pt-2 pb-5" id="Prevention">
+  <div class="symtons text-center mb-3 mt-4">
+    <h1>6 Steps Prevention Against CoronaVirus</h1>
+  </div><!-- end of symtons -->
+
+<div class="container">
+<div class="row pt-5">
+  <div class="owl-carousel owl-theme">
+    <div class="imgBox">
+  <figure class="text-center">
+          <img src="img/handwashpick.png" class="img-fluid">
+          <figcaption style="font-size: 1.5rem;" id="figcap">Wash Hand</figcaption>
+          <p align="justity">Wash your hands regularly for 20 seconds, with soao and water or alcohol-based hand rub</p>
+        </figure>
+    </div><!-- end of imgBox -->
+
+    <div class="imgBox">
+  <figure class="text-center">
+          <img src="img/wearmask.jpg" class="img-fluid">
+          <figcaption style="font-size: 1.5rem;" id="figcap">Wear Mask</figcaption>
+            <p align="justity">Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</p>
+        </figure>
+    </div><!-- end of imgBox -->
+
+    <div class="imgBox">
+ <figure class="text-center">
+          <img src="img/avoidcrowd.jpg" class="img-fluid">
+          <figcaption style="font-size: 1.5rem;" id="figcap">Avoid Crowds</figcaption>
+          <p align="justity">Here's Who Should Be Avoiding Crowds Right Now. Canceling major public events is wise.</p>
+        </figure>
+    </div><!-- end of imgBox -->
+
+     <div class="imgBox">
+ <figure class="text-center">
+          <img src="img/stayhome.jpg" class="img-fluid">
+          <figcaption style="font-size: 1.5rem;" id="figcap">Stay Home</figcaption>
+          <p align="justity">Stay home and self-isolate from others in the houshold if you fell unwell.</p>
+        </figure>
+    </div><!-- end of imgBox -->
+
+
+     <div class="imgBox">
+ <figure class="text-center">
+          <img src="img/usesop.jpg" class="img-fluid">
+          <figcaption style="font-size: 1.5rem;" id="figcap">Use Soap</figcaption>
+          <p align="justity">Using soap, therefore, becomes far more effective in removing microbes.</p>
+        </figure>
+    </div><!-- end of imgBox -->
+
+
+     <div class="imgBox">
+ <figure class="text-center">
+          <img src="img/keepdistance.jpg" class="img-fluid">
+          <figcaption style="font-size: 1.5rem;" id="figcap">Safe Distance</figcaption>
+          <p align="justity">Keep a Safe Distance to Slow the Spread close face-to-face contact with (COVID-19).</p>
+        </figure>
+    </div><!-- end of imgBox -->
+   
+</div><!-- end of owl-theme -->
+</div><!-- end of row -->
+ </div><!-- end of container -->
+</div><!-- end of container-fluid -->
+
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/owl.autoplay.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+<script type="text/javascript">
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+     nav:true,
+     center:true,
+     dots:true,
+      autoplay:true,  
+        autoplayTimeout:2500, 
+ autoplaySpeed:1000,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        //  575:{
+        //     items:2,
+        //     nav:true
+        // },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:3,
+             }
+    }
+})
+</script>
+<!-- end of  owl-carousel -->
+<!-- ..................End container-fluid 6 Steps Prevention Against CoronaVirus............ -->
+
+
+
+
+
+<!-- ..............start container-fluid contact us................. -->
+<div class="SevenSection pt-2 pb-5" id="contact">
+  <div class="symtons text-center mb-5 mt-4">
+    <h1>CONTACT US</h1>
+  </div><!-- end of symtons -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-10 mx-auto d-block">
+
+      <form method="POST" action="savedata.php" class="animate__animated animate__jackInTheBox wow" data-wow-duration="2s" data-wow-delay="0s">
+        <div class="box">
+        <div class="inputBox">
+         <input type="text" name="user" autocomplete="off" required>
+         <label>Username</label>
+        </div><!-- end of inputBox -->
+
+         <div class="inputBox">
+         <input type="Email" name="email" autocomplete="off" required>
+         <label>Email</label>
+        </div><!-- end of inputBox -->
+
+         <div class="inputBox">
+         <input type="number" name="phone" autocomplete="off" required>
+         <label>Mobile</label>
+        </div><!-- end of inputBox -->
+</div><!-- end of box -->
+
+         <div class="form-group">
+      <label>Select Symptoms</label><br>
+
+
+<div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+      <input type="checkbox" class="custom-control-input" id="customCheck1" name="symp" value="cold">
+      <label class="custom-control-label" for="customCheck1">Cold</label>
+      </div><!-- end of custom-checkbox -->
+
+
+      <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+      <input type="checkbox" class="custom-control-input" id="customCheck2" name="symp" value="fever">
+      <label class="custom-control-label" for="customCheck2">Fever</label>
+      </div><!-- end of custom-checkbox -->
+
+       <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+      <input type="checkbox" class="custom-control-input" id="customCheck3" name="symp" value="breath">
+      <label class="custom-control-label" for="customCheck3">Difficulty In Breath</label>
+      </div><!-- end of custom-checkbox -->
+
+      <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+      <input type="checkbox" class="custom-control-input" id="customCheck4" name="symp" value="tired">
+      <label class="custom-control-label" for="customCheck4">Feeling Weak</label>
+      </div><!-- end of custom-checkbox -->
+
+        </div><!-- end of form-group -->
+
+
+
+          <div class="form-group">
+            <label for="exampleFormControlTextareal">Descripe how you are feeling</label>
+            <textarea class="form-control" id="exampleFormControlTextareal" rows="3" name="massage"></textarea>
+</div><!-- end of form-group -->
+
+   <button type="submit" class="btn btn-info" name="submit" value="submit" style="background-color: #117a8b!important;">Submit</button>
+      </form>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+</div><!-- end of container -->
+  <!-- ..............end of container-fluid contact us................. -->
+
+
+
+
+
+<!-- ........................top arrwo button.................. -->
+<div class="container scrolltop float-right pr-5">
+  <i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i>
+  
+</div>
+<!-- ........................end of top arrwo button.................. -->
+
+
+
+   <!-- ..............start footer ................. -->
+
+<footer class="mt-5 pt-5">
+  <div class="container-fluid text-center text-white footerback">
+    <p>&copy; Copyright By Kishorepiple123@gmail.com</p>
+  </div><!-- end of container-fluid -->
+</footer>
+    <!-- ..............end of  footer................. -->
+
+
+
+    <script type="text/javascript">
+      mybutton = document.getElementById('myBtn');
+
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction(){
+
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+
+          mybutton.style.display = "block";
+        }else
+        {
+          mybutton.style.display = "none";
+        }
+      }
+
+      function topFunction(){
+        document.body.scrollTop = 0; // for safari
+        document.documentElement.scrollTop = 0; // for chrome, firefox, IE and opera
+      }
+ </script>
+
+
+
+
+
+<!--     ........................Animation................... -->
+ <script src="js/wow.min.js"></script>
+ <script>
+    new WOW().init();
+ </script>
+
+
+</body>
+</html>

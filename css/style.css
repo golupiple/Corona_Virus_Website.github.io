@@ -1,0 +1,558 @@
+<style>
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Mulish';
+}
+html{
+	scroll-behavior: smooth;
+}
+.row{
+	margin-left: 0!important; margin-right: 0!important;
+}
+/*............................navbar........................*/
+.navStyle{
+	background-color: #117a8b!important;
+	}
+
+	.navStyle ul li a{
+		color: white!important;
+		transition: 0.3s all;
+	}
+
+	/*.navStyle ul li a:hover{
+		color: white!important;
+		
+	}*/
+	.hover-line::after{
+		content: '';
+		display: block;
+		width: 0%;
+		height: 2px;
+		transition: width .3;
+		background-color: white;
+	}
+
+	.hover-line:hover::after{
+		width: 100%;
+		transition: width .3s;
+	}
+
+
+
+/*	......................start seconde step container-fluid......................*/
+.mainHeader{
+	height: 450px;
+	width: 100%;
+}
+.rightside h1{
+	font-size: 3rem;
+	
+	text-align: center;
+}
+
+.rightside .coronaRotade img , .navbar-brand img{
+	animation: corona 3s linear infinite;
+}
+
+@keyframes corona{
+	/*0% {
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}*/
+	0% {
+		transform: scale(.75);
+	}
+
+	20% {
+		transform: scale(1);
+	}
+
+	40% {
+		transform: scale(.75);
+	}
+
+	60% {
+		transform: scale(1);
+	}
+
+	80% {
+		transform: scale(.75);
+	}
+
+	100% {
+		transform: scale(.75);
+	}
+}
+
+
+.leftside img{
+	animation: coronabeat 5s linear infinite;
+}
+
+@keyframes coronabeat{
+	0% {
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+	/*0% {
+		transform: scale(.75);
+	}
+
+	20% {
+		transform: scale(1);
+	}
+
+	40% {
+		transform: scale(.75);
+	}
+
+	60% {
+		transform: scale(1);
+	}
+
+	80% {
+		transform: scale(.75);
+	}
+
+	100% {
+		transform: scale(.75);
+	}*/
+}
+
+/*.....................start about.......................*/
+.forthSection p{
+	font-size: 17px;
+}
+
+/*.....................end about.......................*/
+
+
+
+
+
+
+/*.....................coronaUpdate.......................*/
+.coronaUpdate{
+	margin: 0 0 3rem 0;
+}
+.coronaUpdate h3{
+	color: gray;
+}
+.coronaUpdate h1{
+	font-size: 2rem;
+	text-align: center;
+}
+.coronaUpdate p{
+	text-align: center;
+}
+
+.table{
+	background-color: #117a8b!important;
+	color: white;
+}
+
+
+
+/*.....................start symptons.......................*/
+.imgBox .img-fluid{
+	max-width: 62%;
+	margin: auto;
+	position: relative;
+}
+.imgBox p{
+	font-size: 1.3rem;
+}
+.owl-carousel .owl-item{
+transform: scale(0.7);
+padding: 10px 0px;
+transition: all 0.5s;
+}
+
+.owl-carousel .owl-item.active.center{
+transform: scale(1.3);
+z-index: 999;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+
+/*.....................end symptons.......................*/
+
+
+/*.....................start contact us.......................*/
+
+form .inputBox{
+position: relative;
+}
+
+form .inputBox input{
+width: 100%;
+padding: 10px;
+font-size: 1rem;
+color: #333;
+letter-spacing: 1px;
+margin-bottom: 30px;
+border: none;
+border-bottom: 1px solid #333;
+background: transparent;
+outline: none;
+}
+
+form .inputBox label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	letter-spacing: 1px;
+	padding: 10px 0;
+	font-size: 1rem;
+	color: #333;
+	transition: 0.5s;
+}
+ .box .inputBox input:focus ~ label,
+ .box .inputBox input:valid ~ label{
+	top: -20px;
+	left: 0;
+	color: #117a8b;
+	font-size: 12px;
+}
+/*.....................end contact us.......................*/
+
+
+/*..................footer.................*/
+.footerback{
+	background-color: #117a8b;
+	padding: 35px 0 35px 0;
+	position: absolute;
+}
+.footerback p{
+	margin-bottom: 0!important;
+position: relative;
+}
+/*..............end of footer...............*/
+
+
+/* ........................top arrwo button.................. */
+#myBtn{
+	display: none; /* didden by default*/
+	position: fixed; /* fixed/sticky position */
+	bottom:  60px; /* place the button at the bottom of the page*/
+	left: 90%; /*place the button 30px from the right */
+	z-index: 99; /* make sure it does not overlap*/
+	border: none; /* remove borders*/
+	outline: none; /* remove outline*/
+    background-color: #0e4953;	/* set a background color*/
+    color: white;	/* set a text color*/
+    cursor: pointer;	/* add a mouse pointer on hover*/
+   padding: 15px;	/* some padding*/
+  border-radius: 50%;	/* circle */
+  font-size: 1.3rem;
+ }
+
+ #myBtn:hover{
+ 	background-color: #606060;
+ }
+/* ........................end of top arrwo button.................. */
+
+
+
+/*...............start animation..............*/
+
+/*.aboutImg{
+	opacity: 1;
+}
+
+.aboutImg .animated{
+	opacity: 0;
+}*/
+
+/*...............end animation..............*/
+
+
+
+
+/*-------------------------------- Respinsive Media Styles --------------------------------*/
+@media only screen and (min-width: 1554px) and (max-width: 1920px) {
+/* .........about............*/
+
+.forthSection p{
+	font-size: 18px;
+}
+
+}
+/* Medium Device: 1200px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+.navStyle ul li a{
+		font-size: 14px;
+	}
+  .mainHeader h1{
+ 	text-align: center;
+ 	padding: 0;
+ 	width: 100%;
+ 	font-size: 35px;
+ }
+/* .........about............*/
+
+.aboutImg{
+    max-width: 100%;
+    min-height: 285px;
+}
+.forthSection h2{
+	font-size: 23px;
+}
+.forthSection p{
+	font-size: 14px;
+}
+
+
+/*.............owl carosuel............*/
+.imgBox p{
+	font-size: 18px;
+}
+.imgBox #figcap{
+	font-size: 1.3rem!important;
+}
+
+.imgBox .img-fluid{
+	max-width: 45%;
+}
+
+/*.............owl carosuel............*/
+}
+@media only screen and (min-width: 1200px) and (max-width: 1250px) {
+/*.navStyle ul li a{
+		font-size: 14px;
+	}*/
+  .mainHeader h1{
+ 	text-align: center;
+ 	padding: 0;
+ 	width: 100%;
+ 	font-size: 40px;
+ }
+/* .........about............*/
+
+.forthSection h2{
+	font-size: 23px;
+}
+.forthSection p{
+	font-size: 15.5px;
+}
+
+
+/*.............owl carosuel............*/
+.imgBox p{
+	font-size: 18px;
+}
+.imgBox #figcap{
+	font-size: 1.3rem!important;
+}
+
+.imgBox .img-fluid{
+	max-width: 50%;
+}
+
+/*.............owl carosuel............*/
+}
+/* Medium Device: 1200px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+.navStyle ul li a{
+		font-size: 14px;
+	}
+  .mainHeader h1{
+ 	text-align: center;
+ 	padding: 0;
+ 	width: 100%;
+ 	font-size: 35px;
+ }
+/* .........about............*/
+
+.aboutImg{
+    max-width: 100%;
+    min-height: 285px;
+}
+.forthSection h2{
+	font-size: 23px;
+}
+.forthSection p{
+	font-size: 14px;
+}
+
+
+/*.............owl carosuel............*/
+.imgBox p{
+	font-size: 18px;
+}
+.imgBox #figcap{
+	font-size: 1.3rem!important;
+}
+
+.imgBox .img-fluid{
+	max-width: 45%;
+}
+
+/*.............owl carosuel............*/
+}
+@media only screen and (min-width: 1200px) {
+
+	}
+@media only screen and (max-width: 991px) {
+
+	}
+/* Tablet Device: 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.navStyle ul li a{
+		font-size: 14px;
+	}
+  .mainHeader h1{
+ 	text-align: center;
+ 	padding: 0;
+ 	width: 100%;
+ 	font-size: 29.2px;
+ }
+/* .countStyle{
+ 	display: inline!important;
+ }
+ .countStyle p{
+ 	text-align: center;
+ }*/
+/* .........about............*/
+.forthSection h2{
+	font-size: 20.5px;
+}
+.forthSection p{
+	font-size: 15.5px;
+}
+.forthSection #para{
+	display: none;
+}
+
+
+/*.............owl carosuel............*/
+.imgBox p{
+	font-size: 18px;
+}
+.imgBox #figcap{
+	font-size: 1.3rem!important;
+}
+
+.imgBox .img-fluid{
+	max-width: 30%;
+}
+
+/*.............owl carosuel............*/
+}
+/* Large Mobile: 480px */
+
+@media only screen and (max-width: 767px) {
+.mainHeader{
+ 	height: 700px; text-align: center;
+ }
+  .mainHeader h1{
+ 	text-align: center;
+ 	padding: 0;
+ 	width: 100%;
+ 	font-size: 40px;
+ }
+ .countStyle{
+ 	display: inline!important;
+ }
+ .countStyle p{
+ 	text-align: center;
+ }
+
+
+/*.............owl carosuel............*/
+
+.imgBox p{
+	font-size: 15px;
+}
+.imgBox #figcap{
+	font-size: 1.3rem!important;
+}
+
+.imgBox .img-fluid{
+	max-width: 40%;
+}
+/*.................owl carousel,.............*/
+}
+
+
+
+
+
+/* Small Mobile: 320px */
+
+@media only screen and (max-width: 479px) {
+.mainHeader{
+ 	height: 700px; text-align: center;
+ }
+  .mainHeader h1{
+ 	text-align: center;
+ 	padding: 0;
+ 	width: 100%;
+ 	font-size: 30px;
+ }
+ .countStyle{
+ 	display: inline!important;
+ }
+ .countStyle p{
+ 	text-align: center;
+ }
+ .forthSection p {
+    font-size: 1.1rem;
+}
+.forthSection h2{
+  text-align: center;
+
+}
+.h1, h1 {
+    font-size: 2rem;
+}
+}
+
+/*....................................................*/
+/*
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+/*............................................*/
+
+/* Extra small devices (phones, 600px and down) */
+/*@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+*/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+*/
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}*/
+</style>

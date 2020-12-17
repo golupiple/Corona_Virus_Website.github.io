@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.color
+		{
+			color: red;
+			background-color: pink;
+			font-family: verdana;
+			width: 15%;
+		}
+		.color1
+		{
+			color: yellow;
+			background-color: aqua;
+			font-family: monotype corsiva;
+			width: 15%;
+
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#hd").click(function(){
+				$("h1,h2,h3").addClass("color");
+			});
+			$("#sh").click(function(){
+				$("h1,h2,h3").addClass("color1");
+			});
+			$("#tg").click(function(){
+			$("h1,h2,h3").removeClass("color");
+			$("h1,h2,h3").removeClass("color1");
+
+			});
+		});
+	</script>
+</head>
+<body>
+<button id="hd">apply</button>
+<button id="sh">change</button>
+<button id="tg">remove</button>
+<h1>html</h1>
+<h2>css</h2>
+<h3>js</h3>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#hd").click(function(){
+				$("section").fadeOut(2000);
+			});
+			$("#sh").click(function(){
+				$("section").fadeIn(2000);
+			});
+			$("#tg").click(function(){
+				$("section").fadeToggle(2000);
+			});
+		});
+	</script>
+</head>
+<body>
+<section style="background-color: black; height: 200px;width: 200px;"></section>
+<button id="hd">hide</button>
+<button id="sh">show</button>
+<button id="tg">toggle</button>
+
+</body>
+</html>
